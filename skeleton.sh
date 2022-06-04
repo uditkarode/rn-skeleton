@@ -60,8 +60,10 @@ install react-native-paper
 sed -i 's/\(public class MainActivity extends ReactActivity {\)/import android.os.Bundle;\n\n\1\n\n  @Override\n  protected void onCreate(Bundle savedInstanceState) {\n    super.onCreate(null);\n  }/' "$TARGET"/android/app/src/main/java/com/*/MainActivity.java
 
 echo "Importing skeleton files..."
+
 cp -r ./* "$TARGET"
 rm "$TARGET"/README.md
 rm "$TARGET"/skeleton.sh
+yarn react-native link
 
 echo "Process complete!"
