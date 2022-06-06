@@ -61,9 +61,8 @@ sed -i 's/\(public class MainActivity extends ReactActivity {\)/import android.o
 
 echo "Importing skeleton files..."
 
-cp -r ./* "$TARGET"
-rm "$TARGET"/README.md
-rm "$TARGET"/skeleton.sh
-yarn react-native link
+cp -r template-files/* "$TARGET"
+cp template-files/.* "$TARGET"
+yarn --cwd "$TARGET" react-native link
 
 echo "Process complete!"
