@@ -34,23 +34,18 @@ function install() {
   yarn --cwd "$TARGET" add $1
 }
 
-function install-and-link() {
-  install $1
-  yarn --cwd "$TARGET" react-native link $1
-}
-
 echo "Installing dependencies..."
 
 yarn --cwd "$TARGET" install
 yarn --cwd "$TARGET" add -D @types/react
 yarn --cwd "$TARGET" add -D @types/react-native
 
-install-and-link react-native-navigation-bar-color
-install-and-link react-native-safe-area-context
-install-and-link react-native-gesture-handler
-install-and-link react-native-screens
-install-and-link react-native-svg
-install-and-link expo-status-bar
+install react-native-navigation-bar-color
+install react-native-safe-area-context
+install react-native-gesture-handler
+install react-native-screens
+install react-native-svg
+install expo-status-bar
 
 install @react-navigation/native
 install @react-navigation/stack
