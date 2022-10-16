@@ -43,6 +43,7 @@ yarn --cwd "$TARGET" add -D @types/react-native
 install react-native-navigation-bar-color
 install react-native-safe-area-context
 install react-native-gesture-handler
+install react-native-svg-transformer
 install react-native-screens
 install react-native-svg
 install expo-status-bar
